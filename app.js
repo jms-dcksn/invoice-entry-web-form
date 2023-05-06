@@ -24,6 +24,7 @@ app.get('/provision', (req, res) => {
     if (req.query){
         user = req.query.email
     }
+    else { user = '' }
     res.json({ message: `Success! Account has been provisioned.. ${user}`})
 })
 
