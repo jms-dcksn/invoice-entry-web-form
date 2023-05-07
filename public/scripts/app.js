@@ -10,8 +10,10 @@ inputForm.addEventListener('submit', (e) => {
         response.json().then((data)=>{
             console.log(data.message)
             document.querySelector('#message').innerHTML = data.message;
-            alert('Created!');
+            
         })
         
     })
+    alert('Created!');
+    inputForm.reset();
 })
