@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 
 app.get('/', (req, res) => {
-    res.render('pages/index', {title: 'Makan Health EHR Portal', message: ``})
+    res.render('pages/index', {title: 'Makana Health EHR Portal', message: ``})
 })
 
 app.get('/provision', (req, res) => {
