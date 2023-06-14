@@ -13,18 +13,18 @@
 <main>
   <div style="background:rgb(202, 202, 202) !important" class="jumbotron">
     <img src="../assets/makana.png" alt="picture"/>
-    <h1>Nurse Onboarding</h1>
-    <p>Submit user details below</p>
+    <h1>Invoice Entry</h1>
+    <p>Submit invoice details below</p>
   </div>
-  <form id="user_form">
+  <form id="invoice_form">
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        <label id="vendor">Vendor Name</label>
+        <input class="form-control" id="vendor" placeholder="Vendor Name">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <label>Receiver Name</label>
+        <input class="form-control" id="receiver" placeholder="Recipient">
       </div>
     </div>
     <div class="form-group">
@@ -55,12 +55,34 @@
         <input type="text" class="form-control" id="inputZip">
       </div>
     </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Provision New User
-        </label>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label id="invoice-id">Invoice Number</label>
+        <input class="form-control" id="invoice-id" placeholder="Enter invoice id">
+      </div>
+      <div class="form-group col-md-6">
+        <label id="invoice-receipt-date">Receipt Date</label>
+        <input class="form-control" id="invoice-receipt-date" placeholder="Enter Date">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label id="subtotal">Subtotal</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+          </div>
+        <input type="text" class="form-control" id="subtotal" placeholder="$0.00">
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label id="total">Total</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" placeholder="0.00" />
+        </div>
       </div>
     </div>
     <button type="submit" class="btn btn-primary" id="button">Create User</button>

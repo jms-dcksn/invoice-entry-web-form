@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 
 app.get('/', (req, res) => {
-    res.render('pages/index', {title: 'Makana Health EHR Portal', message: ``})
+    res.render('pages/index', {title: 'Makana Health Finance Portal', message: ``})
 })
 
 app.get('/provision', (req, res) => {
@@ -25,7 +25,7 @@ app.get('/provision', (req, res) => {
         user = req.query.email
     }
     else { user = '' }
-    res.json({ message: `Success! Account has been provisioned.. ${user}`})
+    res.json({ message: `Success! Invoice has been submitted!`})
 })
 
 app.listen(port, () => {
