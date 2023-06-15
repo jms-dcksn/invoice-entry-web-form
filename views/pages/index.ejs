@@ -112,6 +112,16 @@
 </main>
 
 <script src="../scripts/app.js"></script>
+<script>
+
+  document.getElementById("invoice_form").onkeypress = function(e) {
+   var key = e.charCode || e.keyCode || 0;     
+   if (key == 13) {
+     //alert("No Enter!");
+     e.preventDefault();
+   }
+ } 
+</script>
 
 <footer>
   <%- include('../partials/footer'); %>
