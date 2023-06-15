@@ -25,7 +25,7 @@ app.get('/provision', (req, res) => {
         user = req.query.email
     }
     else { user = '' }
-    res.json({ message: `Success! Invoice has been submitted!`})
+    res.json({ message: `Success! Invoice has been submitted for vendor ${user}!`})
 })
 
 app.listen(port, () => {

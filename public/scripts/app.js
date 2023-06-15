@@ -1,11 +1,11 @@
-const inputForm = document.querySelector('#user_form')
-const emailInput = document.querySelector('#inputEmail4')
+const inputForm = document.querySelector('#invoice_form')
+const vendorInput = document.querySelector('#vendor')
 
 
 inputForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    const email = emailInput.value
-    fetch('/provision?email=' + email)
+    const vendor = vendorInput.value
+    fetch('/provision?email=' + vendor)
     .then((response) => {
         response.json().then((data)=>{
             console.log(data.message)
@@ -14,6 +14,6 @@ inputForm.addEventListener('submit', (e) => {
         })
         
     })
-    alert('Created!');
+    alert('Invoice Submitted!');
     inputForm.reset();
 })

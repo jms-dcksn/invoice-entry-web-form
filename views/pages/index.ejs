@@ -19,7 +19,7 @@
   <form id="invoice_form">
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label id="vendor">Vendor Name</label>
+        <label for="vendor">Vendor Name</label>
         <input class="form-control" id="vendor" placeholder="Vendor Name">
       </div>
       <div class="form-group col-md-6">
@@ -66,6 +66,29 @@
       </div>
     </div>
     <div class="form-row">
+      <div class="form-group col-md-3">
+        <label id="item">Item</label>
+        <input class="form-control" id="item" placeholder="Enter item details">
+      </div>
+      <div class="form-group col-md-3">
+        <label id="qty">Quantity</label>
+        <input class="form-control" id="qty" placeholder="Enter quantity">
+      </div>
+      <div class="form-group col-md-3">
+        <label id="unit-price">Unit Price</label>
+        <input class="form-control" id="unit-price" placeholder="$0.00">
+      </div>
+      <div class="form-group col-md-3">
+        <label id="total-line">Line Price</label>
+        <input class="form-control" id="total-line" placeholder="$0.00">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <a type="button" class="btn btn-primary" id="add-row">Add Row</a>
+      </div>
+    </div>
+    <div class="form-row">
       <div class="form-group col-md-6">
         <label id="subtotal">Subtotal</label>
         <div class="input-group">
@@ -85,7 +108,7 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" id="button">Create User</button>
+    <button type="submit" class="btn btn-primary" id="button">Submit Invoice</button>
   </form>
   <div class="text-center">
     <p id="message">
